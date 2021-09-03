@@ -1,0 +1,6 @@
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev2 part1\Odev2 part1\bin\Debug\Odev2 part1.exe.config
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev2 part1\Odev2 part1\bin\Debug\Odev2 part1.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev2 part1\Odev2 part1\bin\Debug\Odev2 part1.pdb
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev2 part1\Odev2 part1\obj\Debug\Odev2 part1.csprojResolveAssemblyReference.cache
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev2 part1\Odev2 part1\obj\Debug\Odev2 part1.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev2 part1\Odev2 part1\obj\Debug\Odev2 part1.pdb

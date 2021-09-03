@@ -1,0 +1,18 @@
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\bin\Debug\Vitamin Deposu.exe.config
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\obj\Debug\Vitamin Deposu.csprojResolveAssemblyReference.cache
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\obj\Debug\Vitamin_Deposu.Form1.resources
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\obj\Debug\Vitamin_Deposu.Properties.Resources.resources
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\obj\Debug\Vitamin Deposu.csproj.GenerateResource.Cache
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\bin\Debug\Vitamin Deposu.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\bin\Debug\Vitamin Deposu.pdb
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\obj\Debug\Vitamin Deposu.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Vitamin Deposu\Vitamin Deposu\obj\Debug\Vitamin Deposu.pdb
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\bin\Debug\Vitamin Deposu.exe.config
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\obj\Debug\Vitamin Deposu.exe
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\obj\Debug\Vitamin Deposu.pdb
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\bin\Debug\Vitamin Deposu.exe
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\bin\Debug\Vitamin Deposu.pdb
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\obj\Debug\Vitamin Deposu.csprojResolveAssemblyReference.cache
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\obj\Debug\Vitamin_Deposu.Form1.resources
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\obj\Debug\Vitamin_Deposu.Properties.Resources.resources
+C:\Users\suvgaraj\Desktop\Ndp Proje\Vitamin Deposu\obj\Debug\Vitamin Deposu.csproj.GenerateResource.Cache

@@ -1,0 +1,12 @@
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\bin\Debug\odev2 part22.exe.config
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\obj\Debug\odev2 part22.csprojResolveAssemblyReference.cache
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\obj\Debug\odev2_part22.Form1.resources
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\obj\Debug\odev2_part22.Properties.Resources.resources
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\obj\Debug\odev2 part22.csproj.GenerateResource.Cache
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\bin\Debug\odev2 part22.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\bin\Debug\odev2 part22.pdb
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\obj\Debug\odev2 part22.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\odev2 part22\odev2 part22\obj\Debug\odev2 part22.pdb
+C:\Users\suvgaraj\Desktop\odev2 part22\odev2 part22\bin\Debug\odev2 part22.exe.config
+C:\Users\suvgaraj\Desktop\odev2 part22\odev2 part22\obj\Debug\odev2 part22.exe
+C:\Users\suvgaraj\Desktop\odev2 part22\odev2 part22\obj\Debug\odev2 part22.pdb

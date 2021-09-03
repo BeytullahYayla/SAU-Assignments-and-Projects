@@ -1,0 +1,14 @@
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev Part1\Odev Part1\bin\Debug\Odev Part1.exe.config
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev Part1\Odev Part1\bin\Debug\Odev Part1.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev Part1\Odev Part1\bin\Debug\Odev Part1.pdb
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev Part1\Odev Part1\obj\Debug\Odev Part1.csprojResolveAssemblyReference.cache
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev Part1\Odev Part1\obj\Debug\Odev Part1.exe
+c:\users\suvgaraj\documents\visual studio 2013\Projects\Odev Part1\Odev Part1\obj\Debug\Odev Part1.pdb
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\bin\Debug\Odev Part1.exe.config
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\obj\Debug\Odev Part1.exe
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\obj\Debug\Odev Part1.pdb
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\obj\Debug\Odev Part1.csprojResolveAssemblyReference.cache
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\bin\Debug\Odev Part1.exe
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\bin\Debug\Odev Part1.pdb
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\bin\Debug\Odev Part1.exe.CodeAnalysisLog.xml
+C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part1\Odev Part1\bin\Debug\Odev Part1.exe.lastcodeanalysissucceeded
