@@ -2,6 +2,7 @@
 #include "Node2.hpp"
 #include "DogruKuyruk.hpp"
 #include <iomanip>
+#include <cmath>
 using namespace std;
 
 DogruKuyruk::DogruKuyruk(){
@@ -25,6 +26,16 @@ int DogruKuyruk::getFront(){
     }
     
 
+    
+}
+bool DogruKuyruk::isEmpty(){
+    if (front==0)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
     
 }
 Node2* DogruKuyruk::prevNodeOfMax(){
@@ -51,20 +62,161 @@ Node2* DogruKuyruk::prevNodeOfMax(){
 
     
 }
-void DogruKuyruk::PushBack(int data){
-    Node2* temp=front;
-    Node2* nodeToAdd=new Node2(data);
+// void DogruKuyruk::PushBack(int x){
+//     Node2* temp=front;
+//     Node2* nodeToAdd=new Node2(data);
+//     if (front==0)
+//     {
+//         front=nodeToAdd;
+//         back=front;
+//     }
+//     back->next=nodeToAdd;
+//     back=nodeToAdd;
+    
+
+    
+
+// }
+
+void DogruKuyruk::PushBack(int x,int y,int z){
+    Node2* nodeToAddX=new Node2(x);
+    Node2* nodeToAddY=new Node2(y);
+    Node2* nodeToAddZ=new Node2(z);
     if (front==0)
     {
-        front=nodeToAdd;
-        back=front;
+        front=nodeToAddX;
+        nodeToAddX->next=nodeToAddY;
+        nodeToAddY->next=nodeToAddZ;
+        back=nodeToAddZ;
+        
+        maxDistance=distanceToOrigin(x,y,z);
+        totalItem=totalItem+3;
     }
-    back->next=nodeToAdd;
-    back=nodeToAdd;
+    
+    else if (distanceToOrigin(x,y,z)>maxDistance)
+    {
+        back->next=nodeToAddX;
+        nodeToAddX->next=nodeToAddY;
+        nodeToAddY->next=nodeToAddZ;
+        back=nodeToAddZ;
+        maxDistance=distanceToOrigin(x,y,z);
+        totalItem=totalItem+3;
+        
+    }
+    else if (distanceToOrigin(x,y,z)<maxDistance)
+    {
+        Node2* iter=front;
+        int compareX,compareY,compareZ;
+        
+        int counter=1;
+        // for (int i = 1; i <4; i++)
+        // {
+        //     if (i%3==1)
+        //     {
+        //         compareX=iter->data;
+            
+        //     }
+        //     else if (i%3==2)
+        //     {
+        //         compareY=iter->data;
+        //     }
+        //     else if (i%3==0)
+        //     {
+        //         compareZ=iter->data;
+        //         if (distanceToOrigin(compareX,compareY,compareZ)>distanceToOrigin(x,y,z))
+        //         {
+        //             // iter->next=nodeToAddX;
+        //             // nodeToAddX->next=nodeToAddY;
+        //             // nodeToAddY->next=nodeToAddZ;
+        //             // nodeToAddZ->next=iter->next;
+        //             break;
+        //         }
+        //         i=1;
+                
+                
+        //     }
+            
+            
+        //     iter=iter->next;
+        // }
+        // do
+        // {
+        //     if (counter%3==1)
+        //     {
+        //         compareX=iter->data;
+        //         cout<<iter->data<<" ";
+                
+        //     }
+        //     else if(counter%3==2)
+        //     {
+        //         compareY=iter->data;
+        //         cout<<iter->data<<" ";
+               
+        //     }
+        //     else if (counter%3==0)
+        //     {
+        //         compareZ=iter->data;
+        //         cout<<iter->data<<" ";
+                
+                
+               
+        //     }
+           
+            
+        //      counter++;
+        //      iter=iter->next;
+             
+            
+        // } while (counter!=3);
+        while (iter!=0)
+        {
+             if (counter%3==1)
+            {
+                compareX=iter->data;
+                cout<<iter->data<<" ";
+                
+            }
+            else if(counter%3==2)
+            {
+                compareY=iter->data;
+                cout<<iter->data<<" ";
+               
+            }
+            else if (counter%3==0)
+            {
+                compareZ=iter->data;
+                cout<<iter->data<<" ";
+                if (distanceToOrigin(compareX,compareY,compareZ)>distanceToOrigin(x,y,z))
+                {
+                    break;
+                }
+                
+                
+               
+            }
+           
+            
+             counter++;
+             iter=iter->next;
+             
+        }
+        Node2* x=iter->next;
+        iter->next=nodeToAddX;
+        nodeToAddX->next=nodeToAddY;
+        nodeToAddY->next=nodeToAddZ;
+        nodeToAddZ->next=x;
+        
+                   
+        
+        
+    }
+    
     
 
+}
+int DogruKuyruk::distanceToOrigin(int x,int y,int z){
+    return int(sqrt((x*x)+(y*y)+(z*z)));
     
-
 }
 void DogruKuyruk::PopMax(){
     Node2* prev=prevNodeOfMax();
@@ -120,6 +272,15 @@ void DogruKuyruk::PopFront(){
         back=0;
     }
     
+    
+}
+void DogruKuyruk::Print(){
+    Node2* iter=front;
+    while (iter!=0)
+    {
+        cout<<iter->data<<" ";
+        iter=iter->next;
+    }
     
 }
 
