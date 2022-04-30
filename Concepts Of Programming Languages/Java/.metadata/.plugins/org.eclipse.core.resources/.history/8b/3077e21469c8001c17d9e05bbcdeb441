@@ -1,0 +1,7 @@
+
+public class Kisi {
+	private double name;
+	private double money;
+	
+
+}

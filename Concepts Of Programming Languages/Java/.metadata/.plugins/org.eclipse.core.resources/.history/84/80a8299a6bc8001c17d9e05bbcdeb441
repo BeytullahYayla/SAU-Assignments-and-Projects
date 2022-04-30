@@ -46,11 +46,9 @@ public List<Kisi> kisiDondur(){
 		while(sc.hasNextLine())  
 		{ 
 			String[] arrOfStr = sc.nextLine().split("#", 4);
-			double money=Double.parseDouble(arrOfStr[1]);
-			double moneyPerTour=Double.parseDouble(arrOfStr[2]);
-			int betNumber=Integer.parseInt(arrOfStr[3]);
-		    Kisi kisi=new Kisi(arrOfStr[0],money,moneyPerTour,betNumber);
-		    list.add(kisi);
+		   for(int i=0;i<arrOfStr.length;i++) {
+			   System.out.println(arrOfStr[i]);
+		   }
 		}  
 		sc.close();     //closes the scanner  
 		}  

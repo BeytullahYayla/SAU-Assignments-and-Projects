@@ -1,0 +1,18 @@
+
+public class Kisi {
+	private double name;
+	private double money;
+	private double moneyPerTour;
+	private double betNumber;
+	public Kisi(double name, double money, double moneyPerTour, double betNumber) {
+		super();
+		this.name = name;
+		this.money = money;
+		this.moneyPerTour = moneyPerTour;
+		this.betNumber = betNumber;
+	}
+	
+	
+	
+
+}

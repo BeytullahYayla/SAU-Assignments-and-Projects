@@ -4,7 +4,7 @@ public class Kisi {
 	private double money;
 	
 	private double moneyPerTour;
-	private int betNumber;
+	private double betNumber;
 	public Kisi(String name, double money, double moneyPerTour, int betNumber) {
 		super();
 		this.name = name;
@@ -33,7 +33,7 @@ public class Kisi {
 	public double getBetNumber() {
 		return betNumber;
 	}
-	public void setBetNumber(int betNumber) {
+	public void setBetNumber(double betNumber) {
 		this.betNumber = betNumber;
 	}
 	
