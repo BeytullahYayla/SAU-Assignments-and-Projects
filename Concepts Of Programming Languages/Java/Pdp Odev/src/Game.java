@@ -12,14 +12,14 @@ public class Game {
 	}
 	
 	public void Basla() {
-		int tour=1;
+		int tour=0;
 		double moneyOnTable=0;
 		double earnedMoney=0;
 		double lostMoney=0;
 		double counter=0;
 		for(int i=0;i<numberList.size();i++) {
 			tour+=1;
-			for(int j=0;j<personList.size()-counter;i++) {
+			for(int j=0;j<personList.size()-counter-1;i++) {
 				if (personList.get(j).getMoney()>=1000) {
 					if(numberList.get(i)==personList.get(j).getBetNumber()) {
 						earnedMoney=((personList.get(j).getMoney()*personList.get(j).getMoneyPerTour())*10);

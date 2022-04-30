@@ -8,7 +8,8 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Dosya dosya=new Dosya("Kisiler.txt","sayilar.txt");
-		Game game=new Game(dosya.returnPerson(),dosya.returnNumber());
+		dosya.returnPerson();
+		
 	}
 
 }
