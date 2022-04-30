@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Game {
+	private List<Person> personList=new ArrayList<Person>();
+	private List<Integer> numberList=new ArrayList<Integer>(); 
+	
+	
+	public Game(List<Person> personList,List<Integer> numberList) {
+		this.personList=personList;
+		this.numberList=numberList;
+	}
+	
+	public void Basla() {
+		int tour=1;
+		
+		for(int i=0;i<numberList.size();i++) {
+			for(int j=0;j<personList.size();i++) {
+				if (personList.get(j).getMoney()>=1000) {
+					
+				}
+				if(personList.get(j).getMoney()<1000) {
+					personList.remove(j);
+					
+				}
+				
+			}
+			if(personList.isEmpty()) {
+				break;
+			}
+		}
+		
+	}
+
+}
