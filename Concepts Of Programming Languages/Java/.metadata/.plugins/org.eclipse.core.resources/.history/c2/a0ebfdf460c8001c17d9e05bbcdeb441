@@ -1,0 +1,13 @@
+
+public class Dosya {
+	private String kisiler="Kisiler.txt";
+	private String sayilar="Sayilar.txt";
+
+	public Dosya() {
+	
+	}
+	public void readFile() {
+		
+	}
+
+}

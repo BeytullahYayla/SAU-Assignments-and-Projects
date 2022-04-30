@@ -1,0 +1,15 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Dosya {
+	
+	private String kisiTxt;
+	private String sayiTxt;
+	public Dosya(String KisiTxt,String SayiTxt) {
+		this.kisiTxt=KisiTxt;
+	}
+	
+
+}

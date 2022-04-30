@@ -1,0 +1,39 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Dosya {
+	
+	private ArrayList<String> Sayilar;
+	private ArrayList<String> Kisiler; 
+	public Dosya() {
+	
+	}
+	public void readSayilarFile() {
+		try  
+		{  
+		//the file to be opened for reading  
+		FileInputStream fis=new FileInputStream("Sayilar.txt");      
+		FileInputStream fis2=new FileInputStream("Kisiler.txt");
+		Scanner sc=new Scanner(fis);    
+		Scanner sc2=new Scanner(fis2);
+		
+		//file to be scanned  
+		//returns true if there is another line to read  
+		while(sc.hasNextLine())  
+		{
+			Sayilar.add(sc.nextLine());
+			
+		}  
+		sc.close();     //closes the scanner 
+		
+		
+		}  
+		catch(IOException e)  
+		{  
+		e.printStackTrace();  
+		}  
+	}
+
+}

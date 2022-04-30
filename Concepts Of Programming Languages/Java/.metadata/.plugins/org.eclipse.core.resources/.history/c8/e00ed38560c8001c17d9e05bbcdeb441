@@ -1,0 +1,12 @@
+
+public class Dosya {
+	private String fileName=""
+
+	public Dosya() {
+	
+	}
+	public void readFile() {
+		
+	}
+
+}

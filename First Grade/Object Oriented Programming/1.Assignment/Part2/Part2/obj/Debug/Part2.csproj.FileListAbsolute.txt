@@ -1,6 +1,0 @@
-C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part2\Part2\bin\Debug\Odev part2(2).exe.config
-C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part2\Part2\bin\Debug\Odev part2(2).exe
-C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part2\Part2\bin\Debug\Odev part2(2).pdb
-C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part2\Part2\obj\Debug\Part2.csprojResolveAssemblyReference.cache
-C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part2\Part2\obj\Debug\Odev part2(2).exe
-C:\Users\suvgaraj\Desktop\Nesneye dayalı programlama 1.ödev\Part2\Part2\obj\Debug\Odev part2(2).pdb
