@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 char* _isim;
-double _para;
-double _turBasinaYatirilanParaOrani;
+float _para;
+float _turBasinaYatirilanParaOrani;
 int _bahisSayisi;
-Kisi Kisii(char* isim,double para,double turBasinaYatirilanParaOrani,int bahisSayisi){
+Kisi Kisii(char* isim,float para,float turBasinaYatirilanParaOrani,int bahisSayisi){
 	 Kisi this;
 	 this=(Kisi)malloc(sizeof(struct KISI));
 	_isim=isim;
@@ -20,8 +20,8 @@ Kisi Kisii(char* isim,double para,double turBasinaYatirilanParaOrani,int bahisSa
 	this->GetPara=&getPara;
 	this->SetPara=&setPara;
 	
-	//this->GetTurBasinaYatirilanParaOrani=&getTurBasinaYatirilanParaOrani;
-	// this->SetTurBasinaYatirilanParaOrani=&setTurBasinaYatirilanParaOrani;
+	this->GetYatirilanParaOrani=&getYatirilanParaOrani;
+	this->SetYatirilanParaOrani=&setYatirilanParaOrani;
 	
 	this->GetBahisSayisi=&getBahisSayisi;
 	this->SetBahisSayisi=&setBahisSayisi;
@@ -36,21 +36,21 @@ void setIsim(char* yeniIsim){
 	
 }
 
-double getPara(){
+float getPara(){
 	
 	return _para;
 }
-void setPara(double yeniPara){
+void setPara(float yeniPara){
 	_para=yeniPara;
 	
 }
+float getYatirilanParaOrani(){
+	return _turBasinaYatirilanParaOrani;
+}
+void setYatirilanParaOrani(float yeni){
+	_turBasinaYatirilanParaOrani=yeni;
+}
 
- //double getTurBasinaYatirilanPara(){
-	 //return _turBasinaYatirilanParaOrani;
-//}
-// void setTurBasinaYatirilanPara(double yeniTurBasinaYatirilanParaOrani){
-	// _turBasinaYatirilanParaOrani=yeniTurBasinaYatirilanParaOrani;
-// }
 
 int getBahisSayisi(){
 	return _bahisSayisi;

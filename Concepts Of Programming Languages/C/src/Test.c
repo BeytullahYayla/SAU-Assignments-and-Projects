@@ -31,9 +31,14 @@ int main(){
 	
 	
 	// }
+	
+	Kisi kisi;
+	kisi=Kisii("Rahim Yayla",5000,0.75,7);
+	kisi->SetIsim("Beytullah Yayla");
+	printf("%s",kisi->GetIsim);
 	Dosya dosya=Dosyaa();
-	dosya->ReturnNumbers(dosya);
-    
+	//dosya->ReturnNumbers(dosya);
+    dosya->ReturnKisi(dosya);
  
     
  

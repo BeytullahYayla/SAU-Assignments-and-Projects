@@ -6,26 +6,27 @@ struct KISI{
 	char* (*GetIsim)();
 	void (*SetIsim) (char*);
 	
-	double (*GetPara)();
-	void (*SetPara) (double);
+	float (*GetPara)();
+	void (*SetPara) (float);
 	
-	//double (*GetTurBasinaYatirilanParaOrani)();
-	// void (*SetTurBasinaYatirilanParaOrani) (double);
+	float (*GetYatirilanParaOrani)();
+	void (*SetYatirilanParaOrani)(float);
+	
 	
 	int (*GetBahisSayisi)();
 	void (*SetBahisSayisi) (int);
 	
 };
 typedef struct KISI* Kisi;
-Kisi Kisii(char*,double,double,int);
+Kisi Kisii(char*,float,float,int);
 char* getIsim();
 void setIsim(char*);
 
-double getPara();
-void setPara(double);
+float getPara();
+void setPara(float);
 
-//double getTurBasinaYatirilanParaOrani();
-// void setTurBasinaYatirilanParaOrani(double);
+float getYatirilanParaOrani();
+void setYatirilanParaOrani(float);
 
 int getBahisSayisi();
 void setBahisSayisi(int);
