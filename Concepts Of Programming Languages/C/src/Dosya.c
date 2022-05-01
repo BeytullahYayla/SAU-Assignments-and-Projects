@@ -1,17 +1,24 @@
 #include "Dosya.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <string.h>
 
 Dosya Dosyaa(){
 Dosya this;
 this=(Dosya)malloc(sizeof(struct DOSYA));
 this->ReturnNumbers=&returnNumbers;
-
+this->ReturnKisi=&returnKisi;
 }
-
+void remove_spaces(char* s) {
+    char* d = s;
+    do {
+        while (*d == ' ') {
+            ++d;
+        }
+    } while (*s++ = *d++);
+}
 int* returnNumbers(Dosya dosya){
-	 static int array[12];
+	 static int array[277];
 	 int counter=0;
 	
      FILE* ptr;
@@ -22,22 +29,30 @@ int* returnNumbers(Dosya dosya){
         // printf("file can't be opened \n");
      }
  
-    printf("content of this file are \n");
- 
-     while (!feof(ptr)) {
-         number = fgetc(ptr);
+    char line[1000];
+	while(fgets(line,sizeof(line),ptr)){
 		
-        printf("%c", (int)number);
+		remove_spaces(line);
+		int number_line=atoi(line);
+		array[counter]=number_line;
+		printf("%d\n",number_line);
+		
 		
 		counter++;
+   }
 		
-     }
-     fclose(ptr);
+	
+	
+	
+ 
+     
 	 
-	 // for(int i=0;i<12;i++){
-			 // printf("%d",array[i]);
-	 // }
+
 	
 	 return array;
 
+}
+struct Kisi* returnKisi(Dosya dosya){
+	struct Kisi kisiArray[1000];
+	
 }

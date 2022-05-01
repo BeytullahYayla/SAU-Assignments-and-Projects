@@ -46,8 +46,8 @@ void setPara(double yeniPara){
 }
 
  //double getTurBasinaYatirilanPara(){
-	 return _turBasinaYatirilanParaOrani;
-}
+	 //return _turBasinaYatirilanParaOrani;
+//}
 // void setTurBasinaYatirilanPara(double yeniTurBasinaYatirilanParaOrani){
 	// _turBasinaYatirilanParaOrani=yeniTurBasinaYatirilanParaOrani;
 // }
