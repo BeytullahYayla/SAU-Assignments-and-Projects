@@ -25,6 +25,7 @@ Kisi Kisii(char* isim,float para,float turBasinaYatirilanParaOrani,int bahisSayi
 	
 	this->GetBahisSayisi=&getBahisSayisi;
 	this->SetBahisSayisi=&setBahisSayisi;
+	return this;
 }
 
 char* getIsim(){

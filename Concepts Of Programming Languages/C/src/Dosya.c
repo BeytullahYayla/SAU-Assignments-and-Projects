@@ -1,4 +1,5 @@
 #include "Dosya.h"
+#include "Kisi.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -9,6 +10,7 @@ Dosya Dosyaa()
 	this = (Dosya)malloc(sizeof(struct DOSYA));
 	this->ReturnNumbers = &returnNumbers;
 	this->ReturnKisi = &returnKisi;
+	return this;
 }
 void remove_spaces(char *s)
 {
@@ -49,7 +51,7 @@ int *returnNumbers(Dosya dosya)
 
 	return array;
 }
-struct Kisi *returnKisi(Dosya dosya)
+struct Kisi* returnKisi(Dosya dosya)
 {
 
 	int counter = 0;
@@ -62,40 +64,55 @@ struct Kisi *returnKisi(Dosya dosya)
 	char* isim;
 	float para;
 	float yatirilanParaOrani;
+	int sansliSayi;
 	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\src\\Kisiler.txt", "r");
 
 	if (NULL == ptr)
 	{
-		// printf("file can't be opened \n");
+		 printf("file can't be opened \n");
 	}
-	struct Kisi *kisiArray[500];
-	char line[500];
+	Kisi* kisiler=(Kisi*)malloc(1000*sizeof(Kisi));
+	char line[1000];
 	while (fgets(line, sizeof(line), ptr))
 	{
-		remove_spaces(line);
+		
 		token = strtok(line, delimiter);
 
 		while (token != NULL)
 		{
-			printf("%s\n", token);
+			
 			if (counter2 == 0)
 			{
+				isim=token;
 				
 			}
 			else if (counter2 == 1)
 			{
+				para=atof(token);
 			}
 			else if (counter2 == 2)
 			{
+				yatirilanParaOrani=atof(token);
 			}
 			else if (counter2 == 3)
 			{
+				sansliSayi=atoi(token);
 			}
-
+			
 			token = strtok(NULL, delimiter);
 			counter2++;
 		}
-
+		counter2=0;
+		Kisi kisi=Kisii(isim,para,yatirilanParaOrani,sansliSayi);
+		
+		kisiler[counter]=kisi;
+		printf("%d",kisiler[counter]->GetBahisSayisi());
 		counter++;
+
 	}
+	
+	
+	
+	return kisiler;
+
 }
