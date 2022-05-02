@@ -8,8 +8,11 @@ Dosya Dosyaa()
 {
 	Dosya this;
 	this = (Dosya)malloc(sizeof(struct DOSYA));
+	this->topOfList=NULL;
+	this->endOfList=NULL;
 	this->ReturnNumbers = &returnNumbers;
 	this->ReturnKisi = &returnKisi;
+	this->DeleteKisiList=&deleteKisiList;
 	return this;
 }
 void remove_spaces(char *s)
@@ -44,10 +47,15 @@ int *returnNumbers(Dosya dosya)
 		remove_spaces(line);
 		int number_line = atoi(line);
 		array[counter] = number_line;
-		printf("%d\n", number_line);
+		
 
 		counter++;
 	}
+	for (int i = 0; i < counter; i++)
+	{
+		printf("%d\n",array[i]);
+	}
+	
 
 	return array;
 }
@@ -110,9 +118,61 @@ struct Kisi* returnKisi(Dosya dosya)
 		counter++;
 
 	}
+	for (int i = 0; i < 1000; i++)
+	{
+		printf("%s\n",kisiler[i]->GetIsim());
+	}
+	
 	
 	
 	
 	return kisiler;
+
+}
+void addKisi(Dosya dosya,Kisi kisi){
+	if (dosya->topOfList==NULL)
+	{
+		dosya->topOfList=kisi;
+		dosya->endOfList=kisi;
+	}
+	else{
+		
+		dosya->endOfList->next=kisi;
+		dosya->endOfList=kisi;
+	}
+	
+
+}
+void printKisiList(Dosya dosya){
+
+	Kisi tmp=dosya->topOfList;
+	if (tmp==NULL)
+	{
+		printf("%s","Empty List");
+	}
+	else{
+		while (tmp!=NULL)
+	
+		tmp->PrintKisi(tmp);
+		tmp=tmp->next;
+	
+	
+	}
+	free(tmp);
+	
+
+}
+void deleteKisiList(Dosya dosya){
+
+	Kisi tmp=dosya->topOfList;
+	while (dosya->endOfList->next!=0) {
+	
+	   tmp = dosya->topOfList;
+       dosya->topOfList = dosya->topOfList->next;
+	   tmp->DeleteKisi(tmp);
+	   
+	}
+	
+	
 
 }

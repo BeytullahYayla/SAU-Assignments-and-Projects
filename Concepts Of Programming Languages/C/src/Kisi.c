@@ -13,6 +13,8 @@ Kisi Kisii(char* isim,float para,float turBasinaYatirilanParaOrani,int bahisSayi
 	_para=para;
 	_turBasinaYatirilanParaOrani=turBasinaYatirilanParaOrani;
 	_bahisSayisi=bahisSayisi;
+
+	this->next=NULL;
 	
 	this->GetIsim=&getIsim;
 	this->SetIsim=&setIsim;
@@ -25,6 +27,9 @@ Kisi Kisii(char* isim,float para,float turBasinaYatirilanParaOrani,int bahisSayi
 	
 	this->GetBahisSayisi=&getBahisSayisi;
 	this->SetBahisSayisi=&setBahisSayisi;
+
+	this->DeleteKisi=&deleteKisi;
+	this->PrintKisi=&printKisi;
 	return this;
 }
 
@@ -58,4 +63,13 @@ int getBahisSayisi(){
 }
 void setBahisSayisi(int yeniBahisSayisi){
 	_bahisSayisi=yeniBahisSayisi;
+}
+void printKisi(Kisi this){
+	printf("%s\n",this->GetIsim());
+	printf("%f\n",this->GetPara());
+	printf("%f\n",this->GetYatirilanParaOrani());
+	printf("%d\n",this->GetBahisSayisi());
+}
+void deleteKisi(Kisi this){
+	free(this);
 }
