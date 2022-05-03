@@ -4,7 +4,7 @@
 
 
 
-Oyun Oyunn(Kisi kisi,int sayilar){
+Oyun Oyunn(Kisi* kisiler,int* sayilar){
     
     Oyun this;
     this=(Oyun)malloc(sizeof(struct OYUN));

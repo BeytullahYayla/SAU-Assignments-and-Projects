@@ -9,11 +9,17 @@ int main(){
 	// Dosya dosya=Dosyaa();
     
     
-   
+    Kisi* kisiler;
 	// dosya->ReturnNumbers(dosya);
-	int* array=(int*)malloc(10*sizeof(int));
-    Kisi kisi=Kisii("Beytullah",10000,0.87,5);
-   kisi->PrintKisi(kisi);
+	
+  Dosya dosya=Dosyaa();
+  kisiler=dosya->ReturnKisi(dosya);
+  for(int i=0;i<1000;i++){
+      
+      printf("%s\n",kisiler[i]->isim);
+  }
+  
+
     
     
     

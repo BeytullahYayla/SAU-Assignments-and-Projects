@@ -12,7 +12,6 @@ Dosya Dosyaa()
 	this->endOfList=NULL;
 	this->ReturnNumbers = &returnNumbers;
 	this->ReturnKisi = &returnKisi;
-	this->DeleteKisiList=&deleteKisiList;
 	return this;
 }
 void remove_spaces(char *s)
@@ -69,10 +68,6 @@ struct Kisi* returnKisi(Dosya dosya)
 	FILE *ptr;
 	char number;
 
-	char* isim;
-	float para;
-	float yatirilanParaOrani;
-	int sansliSayi;
 	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\src\\Kisiler.txt", "r");
 
 	if (NULL == ptr)
@@ -83,15 +78,19 @@ struct Kisi* returnKisi(Dosya dosya)
 	char line[1000];
 	while (fgets(line, sizeof(line), ptr))
 	{
-		
+			char* isim=(char*)malloc(40);
+			float para;
+			float yatirilanParaOrani;
+			int sansliSayi;
 		token = strtok(line, delimiter);
 
 		while (token != NULL)
 		{
 			
+
 			if (counter2 == 0)
 			{
-				isim=token;
+				strcpy(isim,token);
 				
 			}
 			else if (counter2 == 1)
@@ -113,15 +112,15 @@ struct Kisi* returnKisi(Dosya dosya)
 		counter2=0;
 		Kisi kisi=Kisii(isim,para,yatirilanParaOrani,sansliSayi);
 		
-		kisiler[counter]=kisi;
-		printf("%d",kisiler[counter]->GetBahisSayisi());
+	    kisiler[counter]=kisi;
+        
 		counter++;
 
 	}
-	for (int i = 0; i < 1000; i++)
-	{
-		printf("%s\n",kisiler[i]->GetIsim());
-	}
+
+	
+	
+	
 	
 	
 	
@@ -129,50 +128,4 @@ struct Kisi* returnKisi(Dosya dosya)
 	return kisiler;
 
 }
-void addKisi(Dosya dosya,Kisi kisi){
-	if (dosya->topOfList==NULL)
-	{
-		dosya->topOfList=kisi;
-		dosya->endOfList=kisi;
-	}
-	else{
-		
-		dosya->endOfList->next=kisi;
-		dosya->endOfList=kisi;
-	}
-	
 
-}
-void printKisiList(Dosya dosya){
-
-	Kisi tmp=dosya->topOfList;
-	if (tmp==NULL)
-	{
-		printf("%s","Empty List");
-	}
-	else{
-		while (tmp!=NULL)
-	
-		tmp->PrintKisi(tmp);
-		tmp=tmp->next;
-	
-	
-	}
-	free(tmp);
-	
-
-}
-void deleteKisiList(Dosya dosya){
-
-	Kisi tmp=dosya->topOfList;
-	while (dosya->endOfList->next!=0) {
-	
-	   tmp = dosya->topOfList;
-       dosya->topOfList = dosya->topOfList->next;
-	   tmp->DeleteKisi(tmp);
-	   
-	}
-	
-	
-
-}
