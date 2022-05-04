@@ -10,6 +10,7 @@ Kisi Kisii(char* isim,float para,float turBasinaYatirilanParaOrani,int bahisSayi
 	this->para=para;
 	this->turBasinaYatirilanParaOrani=turBasinaYatirilanParaOrani;
 	this->bahisSayisi=bahisSayisi;
+	this->KisiYazdir=&kisiYazdir;
 
 	this->next=NULL;
 	
@@ -17,6 +18,13 @@ Kisi Kisii(char* isim,float para,float turBasinaYatirilanParaOrani,int bahisSayi
 
 
 	return this;
+}
+void kisiYazdir(Kisi this){
+	printf("%s\n",this->isim);
+	printf("%f\n",this->para);
+	printf("%f\n",this->turBasinaYatirilanParaOrani);
+	printf("%d\n",this->bahisSayisi);
+
 }
 
 

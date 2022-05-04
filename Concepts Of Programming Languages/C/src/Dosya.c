@@ -12,6 +12,7 @@ Dosya Dosyaa()
 	this->endOfList=NULL;
 	this->ReturnNumbers = &returnNumbers;
 	this->ReturnKisi = &returnKisi;
+	this->DeleteItemFromArray=&deleteItemFromArray;
 	return this;
 }
 void remove_spaces(char *s)
@@ -50,13 +51,22 @@ int *returnNumbers(Dosya dosya)
 
 		counter++;
 	}
-	for (int i = 0; i < counter; i++)
-	{
-		printf("%d\n",array[i]);
-	}
+	
 	
 
 	return array;
+}
+void deleteItemFromArray(Dosya dosya,Kisi* kisiler,int position){
+	int i;
+	int size=1000;
+	for(i=position-1; i<size-1; i++)
+        {
+            kisiler[i] = kisiler[i + 1];
+        }
+
+        /* Decrement array size by 1 */
+        size--;
+
 }
 struct Kisi* returnKisi(Dosya dosya)
 {

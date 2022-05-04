@@ -9,7 +9,7 @@ struct KISI
 	float para;
 	float turBasinaYatirilanParaOrani;
 	int bahisSayisi;
-
+	void (*KisiYazdir)(struct KISI* kisi);
 
 	
 
@@ -23,5 +23,5 @@ struct KISI
 };
 typedef struct KISI *Kisi;
 Kisi Kisii(char *, float, float, int);
-
+void kisiYazdir(Kisi kisi);
 #endif

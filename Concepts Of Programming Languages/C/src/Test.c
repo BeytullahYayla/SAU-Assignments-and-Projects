@@ -10,15 +10,29 @@ int main(){
     
     
     Kisi* kisiler;
+    int* sayilar;
+
 	// dosya->ReturnNumbers(dosya);
 	
   Dosya dosya=Dosyaa();
+  sayilar=dosya->ReturnNumbers(dosya);
+
   kisiler=dosya->ReturnKisi(dosya);
-  for(int i=0;i<1000;i++){
-      
-      printf("%s\n",kisiler[i]->isim);
-  }
+
+  Oyun oyun=Oyunn(kisiler,sayilar);
+  oyun->Basla(oyun);
+ 
   
+// for (int i = 0; i < 277; i++)
+// {
+//     printf("%d\n",sayilar[i]);
+// }
+
+// for (int i = 0; i < 1000; i++)
+// {
+//     printf("%s\n",kisiler[i]->isim);
+// }
+
 
     
     
