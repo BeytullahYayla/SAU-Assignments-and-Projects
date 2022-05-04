@@ -10,6 +10,8 @@ struct DOSYA
   struct KISI* topOfList;
   struct KISI* endOfList;
   void (*DeleteItemFromArray)(struct DOSYA* dosya,Kisi* kisiler,int);
+  int (*ReturnNumberOfKisi)(struct DOSYA* dosya);
+  int (*ReturnNumberOfSayi)(struct DOSYA* dosya);
 };
 typedef struct DOSYA* Dosya;
 
@@ -17,5 +19,7 @@ Dosya Dosyaa();
 void deleteItemFromArray(Dosya dosya,Kisi* kisiler,int);
 int* returnNumbers(Dosya dosya);
 struct Kisi* returnKisi(Dosya dosya);
+int returnNumberOfKisi(Dosya dosya);
+int returnNumberOfSayi(Dosya dosya);
 
 #endif 

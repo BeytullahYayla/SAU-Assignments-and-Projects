@@ -6,7 +6,7 @@
 #include "Oyun.h"
 int main(){
 
-	// Dosya dosya=Dosyaa();
+	Dosya dosya=Dosyaa();
     
     
     Kisi* kisiler;
@@ -14,14 +14,15 @@ int main(){
 
 	// dosya->ReturnNumbers(dosya);
 	
-  Dosya dosya=Dosyaa();
+
+
   sayilar=dosya->ReturnNumbers(dosya);
 
   kisiler=dosya->ReturnKisi(dosya);
 
   Oyun oyun=Oyunn(kisiler,sayilar);
   oyun->Basla(oyun);
- 
+
   
 // for (int i = 0; i < 277; i++)
 // {

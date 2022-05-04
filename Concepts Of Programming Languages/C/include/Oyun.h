@@ -6,7 +6,8 @@
 struct OYUN{
     void (*Basla)(struct OYUN* oyun);
     Kisi* kisiler;
-    int* sayilar; 
+    int* sayilar;
+    float masaParasi; 
    
 };
 

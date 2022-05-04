@@ -13,7 +13,48 @@ Dosya Dosyaa()
 	this->ReturnNumbers = &returnNumbers;
 	this->ReturnKisi = &returnKisi;
 	this->DeleteItemFromArray=&deleteItemFromArray;
+	this->ReturnNumberOfKisi=&returnNumberOfKisi;
+	this->ReturnNumberOfSayi=&returnNumberOfSayi;
 	return this;
+}
+int returnNumberOfKisi(Dosya dosya){
+	char line[500];
+	FILE *ptr;
+	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\src\\Kisiler.txt", "r");
+	int counter=0;
+	while (fgets(line, sizeof(line), ptr))
+	{
+		
+			
+
+		
+		
+        
+		counter++;
+
+	}
+	return counter;
+
+}
+
+int returnNumberOfSayi(Dosya dosya){
+	char line[500];
+	FILE *ptr;
+	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\src\\Sayilar.txt", "r");
+	int counter=0;
+	while (fgets(line, sizeof(line), ptr))
+	{
+		
+			
+
+		
+		
+        
+		counter++;
+
+	}
+	return counter;
+
 }
 void remove_spaces(char *s)
 {
@@ -28,7 +69,8 @@ void remove_spaces(char *s)
 }
 int *returnNumbers(Dosya dosya)
 {
-	static int array[277];
+	int size=returnNumberOfSayi(dosya);
+	int* array=(int*)malloc(sizeof(int)*returnNumberOfSayi(dosya));
 	int counter = 0;
 
 	FILE *ptr;
@@ -64,8 +106,8 @@ void deleteItemFromArray(Dosya dosya,Kisi* kisiler,int position){
             kisiler[i] = kisiler[i + 1];
         }
 
-        /* Decrement array size by 1 */
-        size--;
+       
+        
 
 }
 struct Kisi* returnKisi(Dosya dosya)
@@ -84,15 +126,16 @@ struct Kisi* returnKisi(Dosya dosya)
 	{
 		 printf("file can't be opened \n");
 	}
-	Kisi* kisiler=(Kisi*)malloc(1000*sizeof(Kisi));
+	
 	char line[1000];
+	Kisi* kisiler=(Kisi*)malloc(returnNumberOfKisi(dosya)*sizeof(Kisi));
 	while (fgets(line, sizeof(line), ptr))
 	{
 			char* isim=(char*)malloc(40);
 			float para;
 			float yatirilanParaOrani;
 			int sansliSayi;
-		token = strtok(line, delimiter);
+			token = strtok(line, delimiter);
 
 		while (token != NULL)
 		{
