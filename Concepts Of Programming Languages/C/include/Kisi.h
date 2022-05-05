@@ -1,16 +1,16 @@
 #ifndef KISI_H
 #define KISI_H
-
+#include <stdbool.h>
 struct KISI
 {
 
 
 	char* isim;
-	float para;
+	double para;
 	float turBasinaYatirilanParaOrani;
 	int bahisSayisi;
 	void (*KisiYazdir)(struct KISI* kisi);
-
+	bool isActive;
 	
 
 	
@@ -22,6 +22,6 @@ struct KISI
 	
 };
 typedef struct KISI *Kisi;
-Kisi Kisii(char *, float, float, int);
+Kisi Kisii(char *, double, float, int);
 void kisiYazdir(Kisi kisi);
 #endif

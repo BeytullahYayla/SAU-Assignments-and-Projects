@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <time.h>
 Oyun Oyunn(Kisi *kisiler, int *sayilar)
 {
 
@@ -19,27 +20,37 @@ Oyun Oyunn(Kisi *kisiler, int *sayilar)
 
 void basla(Oyun this)
 {
-    printf("%s\n", "*************************************Kisiler*****************************************");
+   
 
-    float kazanilanPara=0;
-    float kaybedilenPara=0;
+    double kazanilanPara=0;
+    double kaybedilenPara=0;
     Dosya dosya;
     dosya=Dosyaa();
-    float enBuyukPara=0;
+    int kisiSayisi=dosya->ReturnNumberOfKisi(dosya);
+    int sayiSayisi=dosya->ReturnNumberOfSayi(dosya);
+    double enBuyukPara=0;
     int turSayisi = 0;
-    int kalanKisiSayisi = 1000;
+    int kalanKisiSayisi = kisiSayisi;
     Kisi enZenginKisi;
     enZenginKisi=this->kisiler[0];
-    int counter=0;
-    for (int i = 0; i < 278; i++)
+    int counter;
+    printf("%d\n",kisiSayisi);
+    for (int i = 0; i < sayiSayisi; i++)
     {
 
-        if (kalanKisiSayisi != 0)
+        if (counter!=kisiSayisi)
         {
-        for (int j = 0; j < 1000; j++)
+            /* code */
+        
+        
+        for (int j = 0; j < kisiSayisi; j++)
         {
+           
+                /* code */
             
-            int yatirilanPara=(this->kisiler[j]->para)*(this->kisiler[j]->turBasinaYatirilanParaOrani);
+            
+            
+           
                 if (this->kisiler[j]->para >= 1000)
                 {
                     for (int k = 0; k < 1000; k++)
@@ -56,8 +67,9 @@ void basla(Oyun this)
                     {
                        
                         kazanilanPara=(this->kisiler[j]->para*this->kisiler[j]->turBasinaYatirilanParaOrani)*9;
-                        this->masaParasi-=kazanilanPara;
                         this->kisiler[j]->para+=kazanilanPara;
+                        this->masaParasi-=kazanilanPara;
+                        
                         
                         
                     }
@@ -75,7 +87,15 @@ void basla(Oyun this)
                     // Dosya dosya = Dosyaa();
                     // dosya->DeleteItemFromArray(dosya, this->kisiler, j);
                     // counter++;
-                    counter++;
+                    if (this->kisiler[j]->isActive==true)
+                    {
+                        this->kisiler[j]->isActive=false;
+                        counter++;
+                        
+                    }
+                    
+                    
+                    
                     continue;
 
                  
@@ -84,29 +104,47 @@ void basla(Oyun this)
           
 
              
+        
+       
         }
         }
-        else if (kalanKisiSayisi==0)
+        
+         else if (counter==kisiSayisi)
         {
+            
+                printf("\t\t\t\t\t##\t\tTUR: %i \t\t##\n", turSayisi);
+                printf("\t\t\t\t\t##\tMASA PARASI: %.2f\t##\n", this->masaParasi);
+                printf("\t\t\t\t\t##\t\t\t\t\t##\n");
+                printf("\t\t\t\t\t##--------------------------------------##\n");
+                printf("\t\t\t\t\t##\t\tOYUN BITTI\t\t##\n");
+                
+                printf("\t\t\t\t\t##########################################\n");
             break;
         }
+        
+       printf("%d\n",counter);
         
         
          
         turSayisi++;
-        kalanKisiSayisi-=counter;
-        printf("%s\n", "#######Tur Sayisi########");
-        printf("%d\n", turSayisi);
-        printf("%s\n", "#######SansliSayi#######");
-        printf("%d\n", this->sayilar[i]);
-        printf("%s\n", "######Masa Parasi########");
-        printf("%f\n", floor(this->masaParasi));
         
-        printf("%s\n","#########En zengin Kisi########");
-        printf("%s\n",enZenginKisi->isim);
-        printf("%s\n","#########En zengin Kisi Para########");
-        printf("%f\n",floor(enZenginKisi->para));
+ 
+        printf("%d",counter);
+        printf("\t\t\t\t\t##########################################\n");
+                printf("\t\t\t\t\t##\t\tSANSLI SAYI: %i\t\t##\n", this->sayilar[i]);
+                printf("\t\t\t\t\t##########################################\n");
+                printf("\t\t\t\t\t##########################################\n");
+                printf("\t\t\t\t\t##\t\tTUR: %i \t\t##\n", turSayisi);
+                printf("\t\t\t\t\t##\tMASA PARASI: %.2f\t##\n", this->masaParasi);
+                printf("\t\t\t\t\t##\t\t\t\t\t##\n");
+                printf("\t\t\t\t\t##--------------------------------------##\n");
+                printf("\t\t\t\t\t##\t\tEN ZENGIN KISI\t\t##\n");
+                printf("\t\t\t\t\t##\t\t%s\t\t##\n", enZenginKisi->isim);
+                printf("\t\t\t\t\t##\tBAKIYESI: %.2f\t\t##\n", enZenginKisi->para);
+                printf("\t\t\t\t\t##########################################\n");
+       
         
+
        
        
        
