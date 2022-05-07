@@ -12,7 +12,7 @@ Kisi Kisii(char* isim,double para,float turBasinaYatirilanParaOrani,int bahisSay
 	this->bahisSayisi=bahisSayisi;
 	this->KisiYazdir=&kisiYazdir;
 	this->isActive=true;
-	this->next=NULL;
+	
 	
 	
 
@@ -27,5 +27,6 @@ void kisiYazdir(Kisi this){
 	
 
 }
+
 
 

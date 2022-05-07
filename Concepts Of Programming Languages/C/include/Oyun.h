@@ -5,6 +5,7 @@
 
 struct OYUN{
     void (*Basla)(struct OYUN* oyun);
+	void (*DeleteOyun)(struct OYUN* oyun);
     Kisi* kisiler;
     int* sayilar;
     double masaParasi; 
@@ -14,5 +15,6 @@ struct OYUN{
 typedef struct OYUN* Oyun;
 Oyun Oyunn(Kisi*,int*);
 void basla(Oyun oyun);
+void deleteOyun(Oyun oyun);
 
 #endif 
