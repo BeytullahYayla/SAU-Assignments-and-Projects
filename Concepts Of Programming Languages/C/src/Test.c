@@ -6,22 +6,22 @@
 #include "Oyun.h"
 int main(){
 
- Dosya dosya=Dosyaa();
-    
-    
+  
   Kisi* kisiler;
   int* sayilar;
-  sayilar=dosya->ReturnNumbers(dosya);
+ Dosya dosya=Dosyaa();//dosya yapısı oluşturulur
+    
+   
+  sayilar=dosya->ReturnNumbers(dosya);//dosyanın okuduğu sayılar sayilar dizisine atilir
 
-  kisiler=dosya->ReturnKisi(dosya);
+  kisiler=dosya->ReturnKisi(dosya);//dosyanin okuduğu kisiler kisiler dizisine atilir
 
-  Oyun oyun=Oyunn(kisiler,sayilar);
-  oyun->Basla(oyun);
-  oyun->DeleteOyun(oyun);
-  dosya->DeleteDosya(dosya);
+  Oyun oyun=Oyunn(kisiler,sayilar);//oyun yapısı parametre olarak kisiler ve sayilari alarak olusturulur
+  oyun->Basla(oyun);//Oyun baslatilir
+  oyun->DeleteOyun(oyun);//Bellekten alınan alan nelleğe geri tahsis edilir
+  dosya->DeleteDosya(dosya);//Bellekten alınan alan nelleğe geri tahsis edilir
 
   
-
     
     
     

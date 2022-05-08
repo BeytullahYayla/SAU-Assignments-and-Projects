@@ -4,24 +4,25 @@
 #include <stdio.h>
 #include <string.h>
 
-Dosya Dosyaa()
+Dosya Dosyaa()//Constructor benzetimi
 {
 	Dosya this;
-	this = (Dosya)malloc(sizeof(struct DOSYA));
+	this = (Dosya)malloc(sizeof(struct DOSYA));//Bellekten yapı için yer tahsis edilir
+	//Fonksiyon göstericileri ilgili fonksiyonların adreslerine atanır
 	this->ReturnNumbers = &returnNumbers;
 	this->ReturnKisi = &returnKisi;
 	this->DeleteItemFromArray=&deleteItemFromArray;
 	this->ReturnNumberOfKisi=&returnNumberOfKisi;
 	this->ReturnNumberOfSayi=&returnNumberOfSayi;
 	this->DeleteDosya=&deleteDosya;
-	return this;
+	return this;//Yapı geri dondurulur
 }
-int returnNumberOfKisi(const Dosya this){
+int returnNumberOfKisi(const Dosya this){//Dosyadan okunan kisilerin sayisini donduren fonksiyon
 	char line[500];
 	FILE *ptr;
 	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\doc\\Kisiler.txt", "r");
-	int counter=0;
-	while (fgets(line, sizeof(line), ptr))
+	int counter=0;//Sayaç
+	while (fgets(line, sizeof(line), ptr))//Satır satır okuma işlemi 
 	{
 		
 			
@@ -29,19 +30,19 @@ int returnNumberOfKisi(const Dosya this){
 		
 		
         
-		counter++;
+		counter++;//Her satırda sayacı bir arttır
 
 	}
-	printf("%d",counter);
-	return counter;
+	
+	return counter;//Sayıyı geri dondur
 
 }
 
-int returnNumberOfSayi(const Dosya this){
-	char line[500];
+int returnNumberOfSayi(const Dosya this){//Dosyadan okunan sayilarin sayisini dondurur
+	char line[1000];
 	FILE *ptr;
 	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\doc\\Sayilar.txt", "r");
-	int counter=0;
+	int counter=0;//Sayaç
 	while (fgets(line, sizeof(line), ptr))
 	{
 		
@@ -50,10 +51,10 @@ int returnNumberOfSayi(const Dosya this){
 		
 		
         
-		counter++;
+		counter++;//her satır için sayacı bir artir
 
 	}
-	return counter;
+	return counter;//sayaci geri dondur
 
 }
 void remove_spaces(char *s)
@@ -67,10 +68,10 @@ void remove_spaces(char *s)
 		}
 	} while (*s++ = *d++);
 }
-int *returnNumbers(const Dosya this)
+int *returnNumbers(const Dosya this)//Sayilari dondurecek fonksiyon
 {
-	int size=returnNumberOfSayi(this);
-	int* array=(int*)malloc(sizeof(int)*returnNumberOfSayi(this));
+	
+	int* array=(int*)malloc(sizeof(int)*returnNumberOfSayi(this));//Sayilarin tutulacağı dizi
 	int counter = 0;
 
 	FILE *ptr;
@@ -83,12 +84,12 @@ int *returnNumbers(const Dosya this)
 	}
 
 	char line[1000];
-	while (fgets(line, sizeof(line), ptr))
+	while (fgets(line, sizeof(line), ptr))//Satır satır okuma
 	{
 
-		remove_spaces(line);
-		int number_line = atoi(line);
-		array[counter] = number_line;
+		remove_spaces(line);//Satırdaki boşlukları uzaklaştır
+		int number_line = atoi(line);//satırdaki sayıyı int tipine çevir
+		array[counter] = number_line;//diziye ata
 		
 
 		counter++;
@@ -96,7 +97,7 @@ int *returnNumbers(const Dosya this)
 	
 	
 
-	return array;
+	return array;//diziyi dondur
 }
 void deleteItemFromArray(Dosya this,Kisi* kisiler,int position){
 	int i;
@@ -110,12 +111,12 @@ void deleteItemFromArray(Dosya this,Kisi* kisiler,int position){
         
 
 }
-struct Kisi* returnKisi(Dosya this)
+struct Kisi* returnKisi(Dosya this)//Kisileri dondurecek fonksiyon
 {
 
 	int counter = 0;
 	int counter2 = 0;
-	char *delimiter = "#";
+	char *delimiter = "#";//Kısıtlayıcı
 	char *token;
 	FILE *ptr;
 	char number;
@@ -128,7 +129,7 @@ struct Kisi* returnKisi(Dosya this)
 	}
 	
 	char line[1000];
-	Kisi* kisiler=(Kisi*)malloc(returnNumberOfKisi(this)*sizeof(Kisi));
+	Kisi* kisiler=(Kisi*)malloc(returnNumberOfKisi(this)*sizeof(Kisi));//Kisiler dizisi icin kisi sayisi kadar yer ayiriyoruz
 	
 	while (fgets(line, sizeof(line), ptr))
 	{
@@ -136,37 +137,37 @@ struct Kisi* returnKisi(Dosya this)
 			float para;
 			float yatirilanParaOrani;
 			int sansliSayi;
-			token = strtok(line, delimiter);
+			token = strtok(line, delimiter);//stringi uygun kısıtlayıcıya göre parçalıyoruz
 
 		while (token != NULL)
 		{
 			
 
-			if (counter2 == 0)
+			if (counter2 == 0)//sayac 0 olursa isimdir
 			{
 				strcpy(isim,token);
 				
 			}
-			else if (counter2 == 1)
+			else if (counter2 == 1)//1 olursa paradır
 			{
 				para=atof(token);
 			}
-			else if (counter2 == 2)
+			else if (counter2 == 2)//2 olursa orandır
 			{
 				yatirilanParaOrani=atof(token);
 			}
-			else if (counter2 == 3)
+			else if (counter2 == 3)//3 olursa sanslı sayıdır
 			{
 				sansliSayi=atoi(token);
 			}
 			
 			token = strtok(NULL, delimiter);
-			counter2++;
+			counter2++;//counter2 yi arttir
 		}
-		counter2=0;
-		Kisi kisi=Kisii(isim,para,yatirilanParaOrani,sansliSayi);
+		counter2=0;//her dongude 0a eşitle
+		Kisi kisi=Kisii(isim,para,yatirilanParaOrani,sansliSayi);//Yeni bir kisi olustur buldugumuz degerler ile
 		
-	    kisiler[counter]=kisi;
+	    kisiler[counter]=kisi;//dizinin ilgili dizisine ata
         
 		counter++;
 
@@ -177,14 +178,14 @@ struct Kisi* returnKisi(Dosya this)
 	
 	
 	
-	return kisiler;
+	return kisiler;//kisileri geri dondur
 
 }
-void deleteDosya(const Dosya this){
+void deleteDosya(const Dosya this){//Heap bellek bolgesindeki alanı serbest bırakır
 	if(this==NULL){
 		return;
 	}
-	free(this);
+	free(this);//Null değilse serbest bırak
 	
 }
 

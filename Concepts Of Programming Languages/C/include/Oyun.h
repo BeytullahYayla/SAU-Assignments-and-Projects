@@ -13,7 +13,7 @@ struct OYUN{
 };
 
 typedef struct OYUN* Oyun;
-Oyun Oyunn(Kisi*,int*);
+Oyun Oyunn(Kisi*,int*);//Constructor
 void basla(const Oyun oyun);
 void deleteOyun(const Oyun oyun);
 

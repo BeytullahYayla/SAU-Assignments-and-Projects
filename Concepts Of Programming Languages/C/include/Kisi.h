@@ -22,7 +22,7 @@ struct KISI
 	
 };
 typedef struct KISI *Kisi;
-Kisi Kisii(char *, double, float, int);
+Kisi Kisii(char *, double, float, int);//Constructor
 void kisiYazdir(const Kisi kisi);
 
 #endif

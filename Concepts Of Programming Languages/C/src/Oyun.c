@@ -19,7 +19,7 @@ Oyun Oyunn(Kisi *kisiler, int *sayilar)//Oyun structı için constructor simüla
     return this;
 }
 
-void basla(const Oyun this)
+void basla(const Oyun this)//Oyunu baslatacak olan fonksiyon
 {
    
 

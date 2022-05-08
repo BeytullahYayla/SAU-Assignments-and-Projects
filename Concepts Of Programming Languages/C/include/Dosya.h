@@ -14,7 +14,7 @@ struct DOSYA
 };
 typedef struct DOSYA* Dosya;
 
-Dosya Dosyaa();
+Dosya Dosyaa();//Constructor
 void deleteItemFromArray(const Dosya dosya,Kisi* kisiler,int);
 int* returnNumbers(const Dosya dosya);
 struct Kisi* returnKisi(const Dosya dosya);
