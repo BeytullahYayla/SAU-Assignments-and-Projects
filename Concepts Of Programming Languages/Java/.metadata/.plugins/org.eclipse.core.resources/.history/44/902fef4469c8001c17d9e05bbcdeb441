@@ -1,9 +1,0 @@
-
-public class Kisi {
-	private double name;
-	private double money;
-	private double moneyPerTour;
-	private double betNumber;
-	
-
-}

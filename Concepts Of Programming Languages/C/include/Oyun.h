@@ -14,7 +14,7 @@ struct OYUN{
 
 typedef struct OYUN* Oyun;
 Oyun Oyunn(Kisi*,int*);
-void basla(Oyun oyun);
-void deleteOyun(Oyun oyun);
+void basla(const Oyun oyun);
+void deleteOyun(const Oyun oyun);
 
 #endif 

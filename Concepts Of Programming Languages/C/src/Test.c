@@ -17,7 +17,8 @@ int main(){
 
   Oyun oyun=Oyunn(kisiler,sayilar);
   oyun->Basla(oyun);
-  
+  oyun->DeleteOyun(oyun);
+  dosya->DeleteDosya(dosya);
 
   
 

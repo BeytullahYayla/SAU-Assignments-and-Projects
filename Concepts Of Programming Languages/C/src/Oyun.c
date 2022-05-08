@@ -9,17 +9,17 @@
 Oyun Oyunn(Kisi *kisiler, int *sayilar)//Oyun structı için constructor simülasyonu
 {
 
-    Oyun this;
-    this = (Oyun)malloc(sizeof(struct OYUN));//Bellekten yer ayrılır
+    Oyun this;//this structı 
+    this = (Oyun)malloc(sizeof(struct OYUN));//Bellekten this icin yer ayrılır
 	this->DeleteOyun=&deleteOyun;//.h uzantılı dosyadaki fonksiyon göstericisi deleteOyun fonksiyonunun adresini gösterir
-    this->kisiler = kisiler;
-    this->sayilar = sayilar;
-    this->masaParasi=0;
+    this->kisiler = kisiler;//paramatreden gelen kisileri thisdeki kisilere ata
+    this->sayilar = sayilar;//parametreden gelen sayilari sayilara ata
+    this->masaParasi=0;//masaParasinin baslangic degerini 0 ata
     this->Basla = &basla;//Basla fonksiyon gostericisi basla fonksiyonunun adresini tutar
     return this;
 }
 
-void basla(Oyun this)
+void basla(const Oyun this)
 {
    
 
@@ -112,9 +112,9 @@ void basla(Oyun this)
         
          
         turSayisi++;
-		for (int k = 0; k < kisiSayisi; k++)
+		for (int k = 0; k < kisiSayisi; k++)//Diğer tur icin en zengin kisi bulunur
                     {
-                        if (enZenginKisi->para<this->kisiler[k]->para)
+                        if (enZenginKisi->para<this->kisiler[k]->para)//Eger bir onceki turun en zengininin parası bu turdakinden kucukse yeni en zengini kisiler[k] ata
                         {
                             enZenginKisi=this->kisiler[k];
                         }
@@ -122,7 +122,7 @@ void basla(Oyun this)
                     }
         
 	
-		system("cls");
+		system("cls");//Konsol ekranını temizle
       
         printf("\t\t\t\t\t##########################################\n");
                 printf("\t\t\t\t\t##\t\tSANSLI SAYI: %i\t\t##\n", this->sayilar[i]);
@@ -140,8 +140,8 @@ void basla(Oyun this)
 		
 		 if(counter==kalanKisiSayisi){//Eğer kisilerin hepsi elenmişse
 		//Oyun biter
-				sleep(1);
-				system("cls");
+				
+				system("cls");//Konsol ekranını temizle
 				printf("\t\t\t\t\t##########################################\n");
                  printf("\t\t\t\t\t##\t\ttur: %i \t\t##\n", turSayisi);
                  printf("\t\t\t\t\t##\tmasa parasi: %.2f\t##\n", this->masaParasi);
@@ -157,7 +157,8 @@ void basla(Oyun this)
         
 		
 		}
-		if(i==sayiSayisi-1){//
+		if(i==sayiSayisi-1){//Eger yapilacak baska tur kalmamisssa 
+		//Oyun biter
 			system("cls");
 				printf("\t\t\t\t\t##########################################\n");
                  printf("\t\t\t\t\t##\t\tTUR: %i \t\t##\n", turSayisi);
@@ -178,10 +179,10 @@ void basla(Oyun this)
        
     }
 }
-void deleteOyun(Oyun this){//Oyun structinin kapladıgı yeri bellege iade ederiz
-	if(this==NULL){
-		return;
+void deleteOyun(const Oyun this){//Oyun structinin kapladıgı yeri bellege iade ederiz
+	if(this==NULL){//Eger bos bir parametre gelirse
+		return;//bir sey yapma
 		
 	}
-	free(this);
+	free(this);//Bellekte ayrılan yeri serbest bırak
 }

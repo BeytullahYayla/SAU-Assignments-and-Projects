@@ -19,7 +19,7 @@ Kisi Kisii(char* isim,double para,float turBasinaYatirilanParaOrani,int bahisSay
 
 	return this;
 }
-void kisiYazdir(Kisi this){
+void kisiYazdir(const Kisi this){
 	printf("%s\n",this->isim);
 	printf("%f\n",this->para);
 	printf("%f\n",this->turBasinaYatirilanParaOrani);

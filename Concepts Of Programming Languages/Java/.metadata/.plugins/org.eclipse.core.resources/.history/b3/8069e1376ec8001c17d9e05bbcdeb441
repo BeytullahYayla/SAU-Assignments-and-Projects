@@ -1,8 +1,0 @@
-
-public class Game {
-	private List<Person>=new ArrayList<Person>();
-	public Game() {
-		
-	}
-
-}

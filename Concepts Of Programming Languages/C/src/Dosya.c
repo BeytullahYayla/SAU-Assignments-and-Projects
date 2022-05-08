@@ -8,17 +8,16 @@ Dosya Dosyaa()
 {
 	Dosya this;
 	this = (Dosya)malloc(sizeof(struct DOSYA));
-	this->topOfList=NULL;
-	this->endOfList=NULL;
 	this->ReturnNumbers = &returnNumbers;
 	this->ReturnKisi = &returnKisi;
 	this->DeleteItemFromArray=&deleteItemFromArray;
 	this->ReturnNumberOfKisi=&returnNumberOfKisi;
 	this->ReturnNumberOfSayi=&returnNumberOfSayi;
+	this->DeleteDosya=&deleteDosya;
 	return this;
 }
-int returnNumberOfKisi(Dosya this){
-	char line[1000];
+int returnNumberOfKisi(const Dosya this){
+	char line[500];
 	FILE *ptr;
 	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\doc\\Kisiler.txt", "r");
 	int counter=0;
@@ -38,7 +37,7 @@ int returnNumberOfKisi(Dosya this){
 
 }
 
-int returnNumberOfSayi(Dosya this){
+int returnNumberOfSayi(const Dosya this){
 	char line[500];
 	FILE *ptr;
 	ptr = fopen("C:\\Users\\ASUS\\Documents\\GitHub\\SAU-Assignments-and-Projects\\Concepts Of Programming Languages\\C\\doc\\Sayilar.txt", "r");
@@ -68,7 +67,7 @@ void remove_spaces(char *s)
 		}
 	} while (*s++ = *d++);
 }
-int *returnNumbers(Dosya this)
+int *returnNumbers(const Dosya this)
 {
 	int size=returnNumberOfSayi(this);
 	int* array=(int*)malloc(sizeof(int)*returnNumberOfSayi(this));
@@ -83,7 +82,7 @@ int *returnNumbers(Dosya this)
 		// printf("file can't be opened \n");
 	}
 
-	char line[500];
+	char line[1000];
 	while (fgets(line, sizeof(line), ptr))
 	{
 
@@ -180,5 +179,12 @@ struct Kisi* returnKisi(Dosya this)
 	
 	return kisiler;
 
+}
+void deleteDosya(const Dosya this){
+	if(this==NULL){
+		return;
+	}
+	free(this);
+	
 }
 
